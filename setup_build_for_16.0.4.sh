@@ -12,7 +12,7 @@ cd ~
 # use ccache
 export USE_CCACHE=1
 export CCACHE_DIR=~/.ccache
-~/cm-14.1/prebuilts/misc/linux-x86/ccache/ccache -M 50G
+~/lineage-15.1/prebuilts/misc/linux-x86/ccache/ccache -M 50G
 echo -e "export USE_CCACHE=1 \nexport CCACHE_DIR=~/.ccache" >> .bashrc
 
 curl -O https://raw.githubusercontent.com/chautruongthinh/google_clouds/ubuntu_16.0.4/build.sh
