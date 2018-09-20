@@ -99,6 +99,7 @@ echo -e "export USE_CCACHE=1 \nexport CCACHE_DIR=~/.ccache" >> .bashrc
 cd ~
 
 curl -O https://raw.githubusercontent.com/chautruongthinh/google_clouds/ubuntu_16.0.4/build.sh
+curl -O https://raw.githubusercontent.com/chautruongthinh/google_clouds/ubuntu_16.0.4/creat_ota_commit.sh
 
 ## compile rom
 function sync_repo() {
