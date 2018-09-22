@@ -77,7 +77,10 @@ elif [ "$rom" == "dot" ];then
 fi
 
 function clone() {
+if [ -d .repo/local_manifests ];then
+    rm -rf .repo/local_manifests
     git clone https://github.com/chautruongthinh/local_manifests.git -b $branch .repo/local_manifests
+fi
 }
 
 ## clone manifest
@@ -102,15 +105,14 @@ curl -O https://raw.githubusercontent.com/chautruongthinh/google_clouds/ubuntu_1
 curl -O https://raw.githubusercontent.com/chautruongthinh/google_clouds/ubuntu_16.0.4/creat_ota_commit.sh
 
 ## compile rom
-function sync_repo() {
+function build() {
 ~/build.sh
 }
 
-read -p "Do you want to compile now? (y/N) " compile
-if [[ $compile == *"y"* ]];then
-compile
+read -p "Do you want to compile now? (y/N) " build
+if [[ $build == *"y"* ]];then
+build
 fi
 
 fi
-
 
